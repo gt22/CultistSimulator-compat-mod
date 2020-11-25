@@ -8,7 +8,7 @@ fun aspectAllowedFor(verbId: String) = "modded_${verbId}_allowed"
 fun aspectForbiddenFor(verbId: String) = "modded_${verbId}_forbidden"
 
 fun ModBuilder.verbControl() {
-    val verbs = vanilla.sources.flatMap { it.value.verbs }
+    val verbs = vanilla.verbs
     source("verbs/control/aspects") {
         aspects {
             verbs.forEach {

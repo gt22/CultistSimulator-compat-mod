@@ -103,7 +103,7 @@ fun ModBuilder.dependencies() {
     }
     source("dependencies/legacies") {
         legacies {
-            vanilla.sources.values.asSequence().flatMap { it.legacies }.forEach {
+            vanilla.legacies.forEach {
                 legacy(it.id) {
                     effects {
                         add {

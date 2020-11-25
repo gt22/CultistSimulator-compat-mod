@@ -6,9 +6,7 @@ import dawnbreaker.vanilla
 fun getexternalizedName(recipeId: String) = "internal.deck.${recipeId}"
 
 fun ModBuilder.externalizeDecks() {
-    val relevantRecipes = vanilla.sources
-        .flatMap { it.value.recipes }
-        .filter { it.internaldeck != null }
+    val relevantRecipes = vanilla.recipes.filter { it.internaldeck != null }
     val elements = mutableSetOf<String>()
     source("decks/externalized/decks") {
         decks {

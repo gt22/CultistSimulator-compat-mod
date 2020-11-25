@@ -13,7 +13,7 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
     implementation(kotlin("reflect"))
-    implementation("com.frgm:dawnbreaker:0.1.1")
+    implementation("com.frgm:dawnbreaker:0.1.2")
 }
 tasks.withType<KotlinCompile>() {
     kotlinOptions.jvmTarget = "1.8"
